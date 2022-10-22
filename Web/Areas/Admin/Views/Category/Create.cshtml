@@ -1,0 +1,11 @@
+@model Domain.Dtos.AddVolunteerDto
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id">
+        <label >Volunteer name</label>
+        <input type="text" asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    
+    <button id="a123456" type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,33 @@
+@model List<Domain.Dtos.GetVolunteerDto> 
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Occupation</th>
+        <th scope="col">EmailAddress</th>
+        <th scope="col">PhoneNumber</th>
+        <th scope="col">YourMessage</th>
+        <th scope="col"></th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    
+    @foreach(var volunteer in Model)
+    {
+        <tr>
+            <th scope="row">@volunteer.Id</th>
+            <td>@volunteer.Name</td>
+            <td>@volunteer.Address</td>
+            <td>@volunteer.Occupation</td>
+            <td>@volunteer.EmailAddress</td>
+            <td>@volunteer.PhoneNumber</td>
+            <td>@volunteer.YourMessage</td>
+            <td> <a href="/admin/volunteer/edit/@volunteer.Id">Edit</a> | <a href="/admin/volunteer/delete/@volunteer.Id">Delete</a></td>
+        </tr>
+    }
+   
+    </tbody>
+</table>
